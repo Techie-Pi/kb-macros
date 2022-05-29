@@ -55,6 +55,41 @@ fn main() {
         LeftButton.release();
     });
 
+    // Save first to Music Playlist HK
+    combination!(macro_mode, EscapeKey, QKey, {
+        MouseCursor::move_abs(1600, 240);
+        LeftButton.press();
+        LeftButton.release();
+
+        thread::sleep(Duration::from_millis(300));
+
+        MouseCursor::move_abs(1650, 360);
+        LeftButton.press();
+        LeftButton.release();
+
+        thread::sleep(Duration::from_millis(200));
+
+        MouseCursor::move_abs(830, 475);
+        LeftButton.press();
+        LeftButton.release();
+
+        thread::sleep(Duration::from_millis(400));
+
+        MouseCursor::move_abs(830, 130);
+        LeftButton.press();
+        LeftButton.release();
+
+        thread::sleep(Duration::from_millis(700));
+
+        LeftButton.press();
+        LeftButton.release();
+
+        LControlKey.press();
+        AKey.press();
+        LControlKey.release();
+        AKey.release();
+    });
+
     if cfg!(debug_assertions) {
         let macro_mode_clone = macro_mode.clone();
         RControlKey.bind(move || {
