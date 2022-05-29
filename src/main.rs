@@ -1,7 +1,7 @@
 use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::Duration;
-use inputbot::{KeybdKey::*, MouseButton::*, MouseButton, MouseCursor};
+use inputbot::{KeybdKey::*, MouseButton::*, MouseCursor};
 
 #[macro_use]
 mod macros;
